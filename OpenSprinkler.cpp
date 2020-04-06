@@ -355,11 +355,18 @@ void OpenSprinkler::begin() {
   pinMode(PIN_RELAY_3, OUTPUT);
   pinMode(PIN_RELAY_4, OUTPUT);
   pinMode(PIN_RELAY_5, OUTPUT);
-  digitalWrite(PIN_RELAY_1, HIGH);
-  digitalWrite(PIN_RELAY_2, HIGH);
-  digitalWrite(PIN_RELAY_3, HIGH);
-  digitalWrite(PIN_RELAY_4, HIGH);
-  digitalWrite(PIN_RELAY_5, HIGH); // Turn Off External Relay
+  pinMode(PIN_RELAY_6, OUTPUT);
+  pinMode(PIN_RELAY_7, OUTPUT);
+  pinMode(PIN_RELAY_8, OUTPUT);
+  digitalWrite(PIN_RELAY_1, LOW);
+  digitalWrite(PIN_RELAY_2, LOW);
+  digitalWrite(PIN_RELAY_3, LOW);
+  digitalWrite(PIN_RELAY_4, LOW);
+  digitalWrite(PIN_RELAY_5, LOW);
+  digitalWrite(PIN_RELAY_6, LOW);
+  digitalWrite(PIN_RELAY_7, LOW);
+  digitalWrite(PIN_RELAY_8, LOW);
+  
   pinMode(PIN_LED, OUTPUT);
   // Set up sensors
   /* todo: handle two sensors */
@@ -574,6 +581,39 @@ byte OpenSprinkler::set_station_bit(byte sid, byte value) {
       switch_special_station(sid, 1); // handle special stations
       switch (sid) {
         case 0:
+          digitalWrite(PIN_RELAY_1, HIGH);
+          break;
+        case 1:
+          digitalWrite(PIN_RELAY_2, HIGH);
+          break;
+        case 2:
+          digitalWrite(PIN_RELAY_3, HIGH);
+          break;
+        case 3:
+          digitalWrite(PIN_RELAY_4, HIGH);
+          break;
+        case 4:
+          digitalWrite(PIN_RELAY_5, HIGH);
+          break;
+        case 5:
+          digitalWrite(PIN_RELAY_6, HIGH);
+          break;
+        case 6:
+          digitalWrite(PIN_RELAY_7, HIGH);
+          break;
+        case 7:
+          digitalWrite(PIN_RELAY_8, HIGH);
+          break;
+      }
+      return 1;
+    }
+  } else {
+    if(!((*data)&mask)) return 0; // if bit is already reset, return no change
+    else {
+      (*data) = (*data) & (~mask);
+      switch_special_station(sid, 0); // handle special stations
+      switch (sid) {
+        case 0:
           digitalWrite(PIN_RELAY_1, LOW);
           break;
         case 1:
@@ -588,29 +628,14 @@ byte OpenSprinkler::set_station_bit(byte sid, byte value) {
         case 4:
           digitalWrite(PIN_RELAY_5, LOW);
           break;
-      }
-      return 1;
-    }
-  } else {
-    if(!((*data)&mask)) return 0; // if bit is already reset, return no change
-    else {
-      (*data) = (*data) & (~mask);
-      switch_special_station(sid, 0); // handle special stations
-      switch (sid) {
-        case 0:
-          digitalWrite(PIN_RELAY_1, HIGH);
+        case 5:
+          digitalWrite(PIN_RELAY_6, LOW);
           break;
-        case 1:
-          digitalWrite(PIN_RELAY_2, HIGH);
+        case 6:
+          digitalWrite(PIN_RELAY_7, LOW);
           break;
-        case 2:
-          digitalWrite(PIN_RELAY_3, HIGH);
-          break;
-        case 3:
-          digitalWrite(PIN_RELAY_4, HIGH);
-          break;
-        case 4:
-          digitalWrite(PIN_RELAY_5, HIGH);
+        case 7:
+          digitalWrite(PIN_RELAY_8, LOW);
           break;
       }
       return 255;
