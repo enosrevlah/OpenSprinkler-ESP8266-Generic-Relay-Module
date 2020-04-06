@@ -21,7 +21,7 @@ First, configure the IDE:
   - Install the ESP8266 version 2.4.1 with the Arduino IDE Board Manager Menu
   - Configure board options as follows:
   
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/Settings.PNG)
+![alt text](https://github.com/enosrevlah/OpenSprinkler-Sonoff4ch/blob/master/Settings.PNG)
 
 Second, Donwload and updload the code:
   - Download the code in .zip
