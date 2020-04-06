@@ -2,7 +2,7 @@
 
 This is the unified OpenSprinkler firmware adapted to runs on Generic esp8266 relay module, without a display and expansion boards.
 
-This current configuration is designed to run on ![LinkSprite R8](https://www.amazon.com/LinkSprite-211201005-Arduino-Compatible-Wi-Fi-Controller/dp/B01N2ALK8X/ref=sr_1_4?dchild=1&keywords=esp8266+relay&qid=1586152911&sr=8-4)
+This current configuration is designed to run on [LinkSprite R8](https://www.amazon.com/LinkSprite-211201005-Arduino-Compatible-Wi-Fi-Controller/dp/B01N2ALK8X/ref=sr_1_4?dchild=1&keywords=esp8266+relay&qid=1586152911&sr=8-4)
 # Building the firmware
 
 ## Mappings
