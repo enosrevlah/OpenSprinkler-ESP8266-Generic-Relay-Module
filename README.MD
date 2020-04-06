@@ -26,7 +26,7 @@ First, configure the IDE:
 Second, Donwload and updload the code:
   - Download the code in .zip
   - Extract zip file
-  - Edit the difines.cpp PIN_RELAY_1-8 to match your boards gpio layout
+  - Edit the defines.cpp PIN_RELAY_1-8 to match your boards gpio layout
   - Open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
   - In Arduino IDE, go to Upload
 
@@ -36,7 +36,7 @@ First, download code needed:
 
     $ mkdir ~/workspace
     $ cd ~/workspace
-    $ git glone https://github.com/bibarrav/OpenSprinkler-Sonoff4ch
+    $ git glone https://github.com/enosrevlah/OpenSprinkler-Sonoff4ch
     $ git clone https://github.com/esp8266/Arduino.git esp8266_2.4
     $ cd esp8266_2.4
     $ git checkout tags/2.4.1
