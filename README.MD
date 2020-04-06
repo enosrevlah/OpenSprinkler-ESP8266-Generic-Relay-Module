@@ -30,7 +30,7 @@ Second, Donwload and updload the code:
   - Open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
   - In Arduino IDE, go to Sketch and Verify/Compile.
   - In Arduino IDE, go to Sketch and Export Compiled Binary. The newely compiled .bin should now be in the source directory.
-  - Upload the .bin with your preferd program.
+  - Upload the .bin with your preferred program.
   
 ## Linux (command-line)
 
