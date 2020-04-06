@@ -15,7 +15,7 @@ Externals:
 
 ## Ardunino IDE
 
-# First, configure the IDE:
+### First, configure the IDE:
   - Add this URL to the Board Manager : http://arduino.esp8266.com/stable/package_esp8266com_index.json
   - Additional info https://github.com/esp8266/Arduino
   - Install the ESP8266 version 2.4.1 with the Arduino IDE Board Manager Menu
@@ -23,12 +23,12 @@ Externals:
   
 ![alt text](https://github.com/enosrevlah/OpenSprinkler-Sonoff4ch/blob/master/Settings.PNG)
 
-# Second, Download source and make change.
+### Second, Download source and make change.
   - Download the code in .zip format.
   - Extract zip file.
   - Edit the defines.cpp PIN_RELAY_1-8 to match your boards gpio layout.
 
-# Third, Create .bin and upload. 
+### Third, Create .bin and upload. 
   - Open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
   - In Arduino IDE, go to Sketch and Verify/Compile.
   - In Arduino IDE, go to Sketch and Export Compiled Binary. The newely compiled .bin should now be in the source directory.
