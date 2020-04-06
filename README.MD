@@ -1,52 +1,17 @@
-# **OpenSprinkler for Sonoff 4CH Firmware**
+# **OpenSprinkler for Generic esp8266 relay module**
 
-This is the unified OpenSprinkler firmware adapted to runs on Sonoff 4ch, without a display and expansion boards.
+This is the unified OpenSprinkler firmware adapted to runs on Generic esp8266 relay module, without a display and expansion boards.
 
-TODO: Prepare a PR with all modification to be added to the original OpenSklinkler-Firmware repo.
-
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/sonoff4ch.jpg)
 
 # Building the firmware
-
-## Hacking the Sonoff 4ch
-
-For this setup, if you want to use a regular Sonoff 4Ch (Rev1/Rev2)is needed to split the load in (AC) and Relays, because the most irrigation valves are AC 24v poweded.  If you want to use a Sonoff 4ch Pro, skip this step.
-
-  - Disconect any power or connection
-  - Open the Sonoff putting off the 4 screws on the back
-  - Using a soldering iron, remove contacts (solder) between the resistor and the first relay.  In the next images the zones are yellow colored.
-  
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/sonoff4ch-front.jpg)
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/sonoff4ch-front-zoom.jpg)
-
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/sonoff4ch-back.jpg)
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/sonoff4ch-back-zoom.jpg)
-
-  - Check with a multimeter the non continuity between both points.
 
 ## Mappings
 
 Internals:
   - Blue LED or WiFi LED show WiFi connectivity status: ON=WiFi Connected / SlowBlink=Connecting / FastBlink=Initializing
-  - Stations 1 to 4 are mapped to Relays 1 to 4.
-  - Statios 5 to 8 are soft stations, you can use with a HTTP, like another sonoff basic or pow with Sonoff-Tasmota firmware for example.
-
+  - Stations 1 to 8 are mapped to Relays 1 to 8.
 Externals:
 
-![alt text](https://raw.githubusercontent.com/bibarrav/OpenSprinkler-Sonoff4ch/master/sonoff4ch-GPIO-Available.png)
-
-  - 102      --> Flow Sensor    --> GPIO02
-  - VCC3.3  --> Positive 3.3v
-  - RX     --> External Relay --> GPIO03 Serial TXD
-  - TX      --> Rain Sensor    --> GPIO01 Serial RXD
-  - GND     --> Negative
-
-## Preparing Sonoff to upload
-
-  - Disconect power from Sonoff
-  - Hold button 1 and connect serial adaptor
-  - Release the button after 5 secs
-  - Check that all LEDs are OFF
 
 ## Ardunino IDE
 
@@ -61,6 +26,7 @@ First, configure the IDE:
 Second, Donwload and updload the code:
   - Download the code in .zip
   - Extract zip file
+  - Edit the difines.cpp PIN_RELAY_1-8 to match your boards gpio layout
   - Open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
   - In Arduino IDE, go to Upload
 
