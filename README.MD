@@ -24,12 +24,14 @@ First, configure the IDE:
 ![alt text](https://github.com/enosrevlah/OpenSprinkler-Sonoff4ch/blob/master/Settings.PNG)
 
 Second, Donwload and updload the code:
-  - Download the code in .zip
-  - Extract zip file
-  - Edit the defines.cpp PIN_RELAY_1-8 to match your boards gpio layout
+  - Download the code in .zip format.
+  - Extract zip file.
+  - Edit the defines.cpp PIN_RELAY_1-8 to match your boards gpio layout.
   - Open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
-  - In Arduino IDE, go to Upload
-
+  - In Arduino IDE, go to Sketch and Verify/Compile.
+  - In Arduino IDE, go to Sketch and Export Compiled Binary. The newely compiled .bin should now be in the source directory.
+  - Upload the .bin with your preferd program.
+  
 ## Linux (command-line)
 
 First, download code needed:
