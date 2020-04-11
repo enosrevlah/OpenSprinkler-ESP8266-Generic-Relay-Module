@@ -29,7 +29,7 @@ Externals:
   - Edit the defines.cpp PIN_RELAY_1-8 to match your boards gpio layout.
 
 ### Third, Create .bin and upload. 
-  - Open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
+  - In Arduino IDE, open OpenSprinkler-Sonoff4ch/OpenSprinkler-Sonoff4ch.ino
   - In Arduino IDE, go to Sketch and Verify/Compile.
   - In Arduino IDE, go to Sketch and Export Compiled Binary. The newely compiled .bin should now be in the source directory.
   - Upload the .bin with your preferred program.
